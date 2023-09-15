@@ -6,6 +6,9 @@ endif ()
 
 project(accel-ppp C)
 
+set(CMAKE_C_FLAGS_RELEASE "-O3 -DNDEBUG")
+set(CMAKE_C_FLAGS_DEBUG "-O0 -g")
+
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -fno-strict-aliasing -D_GNU_SOURCE -fPIC -rdynamic -Wno-unused-result")
 
 IF (NOT DEFINED LIB_SUFFIX)
