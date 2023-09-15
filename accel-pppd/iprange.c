@@ -214,7 +214,7 @@ int __export iprange_tunnel_check(in_addr_t ipaddr)
 	if (conf_disable)
 		res = 0;
 	else
-		res = !check_range(&client_ranges, ipaddr);
+		res = check_range(&client_ranges, ipaddr);
 	pthread_mutex_unlock(&iprange_lock);
 
 	return res;
